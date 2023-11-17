@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-6">
+        <span id="title">{{ p.title }}</span>
+        {{ p.description }}
+        <img src="{{ p.image.url }}" width="300" height="300" alt="">
+</div> 
+<div class="col-6">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+    </form>
+</div>
+{% endblock %}
